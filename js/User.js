@@ -3,13 +3,14 @@ class User {
     this.socket = socket;
     this.name = name;
   }
-
-  whisper(receiver, message) {}
-
   getName() {
     return this.name;
   }
   getSocket() {
     return this.socket;
   }
+
+  whisper() {}
 }
+
+module.exports = User;
