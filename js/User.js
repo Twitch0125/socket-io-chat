@@ -10,7 +10,13 @@ class User {
     return this.socket;
   }
 
-  whisper() {}
+  whisper(receiver, message) {
+    receiver.emit("whisper", `from ${this.getName()}: ${message}`);
+  }
+
+  nickname(newName) {
+    this.name = newName;
+  }
 }
 
 module.exports = User;

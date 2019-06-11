@@ -9,4 +9,7 @@ $(function() {
   socket.on("chat message", msg => {
     $("#messages").append($("<li>").text(msg));
   });
+  socket.on("whisper", msg => {
+    $("#messages".append($("<li>").text(msg)));
+  });
 });

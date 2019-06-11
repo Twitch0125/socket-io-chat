@@ -15,4 +15,9 @@ class UserList {
   getUsers() {
     return this.users;
   }
+  showUsers(socket) {
+    socket.emit("show users", this.getUsers());
+  }
 }
+
+module.exports = UserList;
